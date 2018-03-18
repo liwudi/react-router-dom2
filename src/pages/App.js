@@ -4,9 +4,9 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import Home from './home/Home';
-import About from './about/About';
-import Topics from './topics/Topics';
+
+import Child from './child/Child'
+
 import '../styles/App.css';
 
 class App extends Component {
@@ -14,15 +14,15 @@ class App extends Component {
     return (
         <Router>
             <div>
+                <h2>账号</h2>
                 <ul>
-                    <li><Link to='/'>首页</Link></li>
-                    <li><Link to='/about'>关于</Link></li>
-                    <li><Link to='/topics'>主题列表</Link></li>
+                    <li><Link to="/react-router">React Router</Link></li>
+                    <li><Link to="/leoashin">LeoAshin</Link></li>
+                    <li><Link to="/justjavac">justjavac</Link></li>
+                    <li><Link to="/reacttraining">React Training</Link></li>
                 </ul>
                 <hr/>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/topics" component={Topics} />
+                <Route path="/:id" component={Child}/>
             </div>
         </Router>
     );

@@ -3,11 +3,11 @@
  */
 import React,{ Component} from 'react';
 
-export default class About extends Component{
+export default class Home extends Component{
     render(){
         return (
             <div>
-                <h1>关于</h1>
+                <h1>{this.props.match.params.id}</h1>
             </div>
         )
     }
